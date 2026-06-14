@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feel Tune</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="index">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="chat.html">Chat</a>
+  <a href="preguntas.html">Preguntas</a>
+  <a href="cantantes.html">Cantantes</a>
+  <a href="descubrir.html">Descubrir</a>
+</div>
+
+<!-- HEADER -->
+<header class="header-index">
+  <div class="nav-logo"><a href="index.html">Feel Tune</a></div>
+  <nav class="nav-pag">
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Pregunta</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO / VIDEO -->
+<section class="hero">
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="imagenes/video_inicio.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Busca<br>lo <span>TUYO</span></h1>
+    <p>No venís a buscar, venís a<br>descubrir lo que siempre fue tuyo</p>
+  </div>
+</section>
+
+<!-- CANTANTES -->
+<section class="cantantes-section">
+  <div class="cantantes-scroll">
+    <img src="imagenes/duki.webp" class="cantante-img" alt="Duki">
+    <img src="imagenes/trueno.jpg" class="cantante-img" alt="Trueno">
+    <img src="imagenes/ysy.webp" class="cantante-img" alt="YSY A">
+    <img src="imagenes/intoxicados.webp" class="cantante-img" alt="Intoxicados">
+    <img src="imagenes/turf.webp" class="cantante-img" alt="Turf">
+    <img src="imagenes/dj_padre.jpg" class="cantante-img" alt="DJ Padre">
+  </div>
+</section>
+
+<!-- DATOS -->
+<section class="datos">
+  <div class="datos-header">
+    <span class="datos-brand">Feel Tune</span>
+    <span class="datos-servicio">Servicios</span>
+  </div>
+  <div class="datos-links">
+    <div class="datos-link">Descubrí <span class="num">01</span></div>
+    <div class="datos-link">Chat <span class="num">02</span></div>
+    <div class="datos-link">Cantantes <span class="num">03</span></div>
+  </div>
+  <p class="datos-texto">Nosotros no seguimos tendencias, las anticipamos: entrá y dejá que te mostremos la música que realmente sos.</p>
+  <button class="btn-sumate" onclick="document.getElementById('registro').scrollIntoView({behavior:'smooth'})">Sumate a Feel Tune</button>
+</section>
+
+<!-- CUERPO -->
+<section class="cuerpo">
+  <div class="cuerpo-img-wrap">
+    <picture>
+    <source media="(max-width: 768px)" srcset="imagenes/soda-stereo-ecos-junio.jpg">
+    <img src="imagenes/cartielypaco_noti.avif" class="cuerpo-img" alt="Artistas">
+    </picture>
+    <img src="imagenes/not_trueno.png" class="cuerpo-img hide-mobile" alt="Artista">
+  </div>
+  <h2 class="cuerpo-titulo">Tu estilo evoluciona según con quién interactuás</h2>
+</section>
+
+<!-- CHAT DEMO -->
+<section class="chat-section">
+  <div class="chat-burbuja izquierda">¿Qué música te copa hoy?</div>
+  <div class="chat-burbuja derecha">Algo con mucha energía 🔥</div>
+  <form class="chat-input-wrap" id="chatIndexForm" onsubmit="sendIndexChat(event)">
+    <input type="text" placeholder="Escribir..." class="chat-input" id="chatIndexInput">
+    <div class="chat-iconos">
+      <span>⌨</span>
+      <span>🎤</span>
+      <button type="submit" class="chat-send" style="background:none;border:none;cursor:pointer;">➤</button>
+    </div>
+  </form>
+</section>
+
+<!-- REGISTRO -->
+<section id="registro">
+  <h3>Sumate a<br>Feel Tune</h3>
+  <p>Tené la mejor experiencia musical</p>
+  <div class="registro-foto"></div>
+  <form class="registro-form" id="registroForm" onsubmit="sendRegistro(event)">
+    <input type="email" placeholder="mail" class="reg-input" required>
+    <input type="text" placeholder="nombre" class="reg-input" required>
+    <input type="password" placeholder="contraseña" class="reg-input" required>
+    <button type="submit" class="btn-enviar">Enviar</button>
+    <div class="form-success" id="registroSuccess">¡Bienvenido a Feel Tune! 🎵</div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Feel Tune</div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <a href="#">Ayuda</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">contacto@feeltune.com</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

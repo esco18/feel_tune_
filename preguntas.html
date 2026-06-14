@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feel Tune — Preguntas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pregunta-body">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="chat.html">Chat</a>
+  <a href="preguntas.html">Preguntas</a>
+  <a href="cantantes.html">Cantantes</a>
+  <a href="descubrir.html">Descubrir</a>
+</div>
+
+<!-- HEADER -->
+<header class="header-chat">
+  <div class="nav-logo"><a href="index.html">Feel Tune</a></div>
+  <nav class="nav-pag">
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Pregunta</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- FAQ -->
+<div class="preguntas-pag">
+  <h2 class="preguntas-titulo">Preguntas frecuentes</h2>
+
+  <div class="faq-item">
+    <button class="faq-pregunta" onclick="toggleFaq(this)">¿La encuesta determina completamente mi estilo musical?</button>
+    <div class="faq-respuesta">
+      No del todo. La encuesta es una guía inicial para orientarte hacia géneros que podrían gustarte,
+      pero tu estilo musical es mucho más amplio y personal. Feel Tune te ayuda a explorar y descubrir
+      nuevas preferencias con el tiempo, más allá del resultado de la encuesta.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cómo puedo participar en el chat?</button>
+    <div class="faq-respuesta">
+      Para participar en el chat solo necesitás una cuenta en Feel Tune. Una vez registrado,
+      podés ingresar a la sección Chat y comenzar a interactuar con otros usuarios, compartir
+      recomendaciones y descubrir nueva música en comunidad. Recordá siempre respetar las normas.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Cómo denunciar contenido inapropiado?</button>
+    <div class="faq-respuesta">
+      Si encontrás contenido que no cumple con nuestras normas, podés reportarlo tocando el ícono
+      de tres puntos junto al mensaje o escribirnos directamente a contacto@feeltune.com.
+      Nuestro equipo revisa todas las denuncias y toma las medidas correspondientes.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Puedo cambiar mi género musical favorito?</button>
+    <div class="faq-respuesta">
+      Sí, podés volver a hacer la encuesta de Descubrir cuando quieras. Tu gusto musical evoluciona
+      y Feel Tune está pensado para acompañarte en ese proceso. También podés explorar cantantes
+      de distintos géneros en la sección Cantantes sin ningún límite.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pregunta" onclick="toggleFaq(this)">¿Feel Tune es gratuito?</button>
+    <div class="faq-respuesta">
+      Feel Tune tiene una versión gratuita con acceso a todas las funciones básicas: encuesta,
+      chat y exploración de cantantes. En el futuro planeamos lanzar funciones premium para
+      una experiencia aún más personalizada. Por ahora, todo el contenido es completamente libre.
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Feel Tune</div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <a href="#">Ayuda</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">contacto@feeltune.com</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

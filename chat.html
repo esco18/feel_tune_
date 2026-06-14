@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feel Tune — Chat</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="chat">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="chat.html">Chat</a>
+  <a href="preguntas.html">Preguntas</a>
+  <a href="cantantes.html">Cantantes</a>
+  <a href="descubrir.html">Descubrir</a>
+</div>
+
+<!-- HEADER -->
+<header class="header-chat">
+  <div class="nav-logo"><a href="index.html">Feel Tune</a></div>
+  <nav class="nav-pag">
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Pregunta</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- CHAT -->
+<section class="chat-section chat-pag">
+  <!-- Normas (mobile + tablet) -->
+  <div class="normas-wrap" id="normasWrap">
+    <button class="normas" id="normasBtn" onclick="toggleNormas()">Normas</button>
+    <ul class="normas-list" id="normasList">
+      <li>No spamear</li>
+      <li>No insultar / Ni discriminar</li>
+      <li>Respetar a todos</li>
+      <li>No compartir links</li>
+    </ul>
+  </div>
+
+  <div class="solo-chat" id="chatMessages">
+    <div class="chat-burbuja izquierda">¡Hola! ¿De qué hablamos hoy? 🎵</div>
+    <div class="chat-burbuja derecha">Quiero descubrir música nueva</div>
+  </div>
+
+  <form class="chat-input-wrap" id="chatForm" onsubmit="sendChat(event)">
+    <input type="text" placeholder="Escribir..." class="chat-input" id="chatInput">
+    <div class="chat-iconos">
+      <span>⌨</span>
+      <span>🎤</span>
+      <button type="submit" class="chat-send" style="background:#fff;border:none;cursor:pointer;">➤</button>
+    </div>
+  </form>
+</section>
+
+<!-- Categoría / imagen -->
+<div class="chat-categoria">
+  <h2 class="titulo-chat">Genero</h2>
+  <picture class="chat-foto">
+  <source media="(min-width: 1200px)" srcset="imagenes/bzrp3.webp">
+  <source media="(min-width: 768px)" srcset="imagenes/bzrp4.jpg">
+  <img src="imagenes/bzrp2.jpg" alt="Imagen de BZRP Categoría">
+  </picture>
+
+  <!-- Normas desktop (2x2 grid below image) -->
+  <div class="normas-desktop">
+    <div class="normas-desktop-item">🚫 No spamear</div>
+    <div class="normas-desktop-item">🚫 No insultar ni discriminar</div>
+    <div class="normas-desktop-item">🤝 Respetar a todos</div>
+    <div class="normas-desktop-item">🔗 No compartir links</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-chat">
+  <div class="footer-brand">Feel Tune</div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <a href="#">Ayuda</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">contacto@feeltune.com</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

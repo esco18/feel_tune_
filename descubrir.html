@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feel Tune — Descubrir</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="body-descubrir">
+
+<!-- HEADER — fuera del .phone para que ocupe el 100% -->
+<header class="header-chat">
+  <div class="nav-logo"><a href="index.html">Feel Tune</a></div>
+  <nav class="nav-pag">
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Pregunta</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="menuClose">✕</button>
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Preguntas</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </div>
+</header>
+
+<div class="phone">
+
+  <!-- HERO IMAGE -->
+  <div class="hero"></div>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="progressBarFill" style="width:0%"></div>
+    </div>
+    <div class="progress-dots" id="progressDots"></div>
+  </div>
+
+  <div id="quizBody">
+    <div class="main-content">
+      <div class="stats-card" id="statsCard">
+        <div class="stats-title">Estadísticas</div>
+        <div class="stats-row">
+          <div class="stat-item"><div class="stat-num" id="statDone">0</div><div class="stat-label">Respondidas</div></div>
+          <div class="stat-item"><div class="stat-num" id="statLeft">15</div><div class="stat-label">Restantes</div></div>
+          <div class="stat-item"><div class="stat-num" id="statPct">0%</div><div class="stat-label">Avance</div></div>
+        </div>
+        <div class="upcoming-list" id="upcomingList"></div>
+      </div>
+
+      <div class="q-wrap" id="questionWrap">
+        <div class="q-counter" id="qCounter">Pregunta 1 de 15</div>
+        <div class="q-text" id="qText"></div>
+        <div class="options" id="optionsContainer"></div>
+        <div class="confirm-wrap">
+          <button class="confirm-btn" id="confirmBtn" onclick="confirmAnswer()">Confirmar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-screen" id="resultScreen">
+    <div class="result-emoji" id="resultEmoji">🎵</div>
+    <div class="result-genre" id="resultGenre"></div>
+    <div class="result-desc" id="resultDesc"></div>
+    <div class="result-breakdown" id="resultBreakdown"></div>
+    <button class="restart-btn" onclick="restartQuiz()">Volver a empezar</button>
+  </div>
+</div>
+
+<!-- FOOTER — fuera del .phone para que sea real footer -->
+<footer>
+  <div class="footer-brand">Feel Tune</div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <a href="#">Ayuda</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">contacto@feeltune.com</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

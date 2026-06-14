@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feel Tune — Cantantes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pag-cantantes">
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="menuClose">✕</button>
+  <a href="chat.html">Chat</a>
+  <a href="preguntas.html">Preguntas</a>
+  <a href="cantantes.html">Cantantes</a>
+  <a href="descubrir.html">Descubrir</a>
+</div>
+
+<!-- HEADER -->
+<header class="header-chat">
+  <div class="nav-logo"><a href="index.html">Feel Tune</a></div>
+  <nav class="nav-pag">
+    <a href="chat.html">Chat</a>
+    <a href="preguntas.html">Pregunta</a>
+    <a href="cantantes.html">Cantantes</a>
+    <a href="descubrir.html">Descubrir</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="contenedor-cantantes">
+
+  <!-- ===== MOBILE: CD + flechas género + cantante único con flechas ===== -->
+  <div class="mobile-cantantes-wrap" id="mobileCantantesWrap">
+    <img src="imagenes/cd.png" class="mobile-cd-img" alt="disco">
+    <div class="mobile-genre-nav">
+      <button class="mobile-arrow-btn" id="mobileGenrePrev">&#8249;</button>
+      <div class="mobile-genre-title" id="mobileGenreTitle">Trap</div>
+      <button class="mobile-arrow-btn" id="mobileGenreNext">&#8250;</button>
+    </div>
+    <div class="mobile-cantantes-section">
+      <div class="mobile-seccion-label">Cantantes</div>
+      <div class="mobile-singer-row">
+        <button class="mobile-arrow-btn" id="mobilePrev">&#8249;</button>
+        <a class="mobile-singer-circle-wrap" id="mobileSingerLink" href="#">
+          <img class="mobile-singer-circle" id="mobileSingerImg" src="" alt="">
+          <span class="mobile-singer-name" id="mobileSingerName"></span>
+        </a>
+        <button class="mobile-arrow-btn" id="mobileNext">&#8250;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TABLET: CD centrado + grilla circular ===== -->
+  <div class="disco-wrap" id="discoCdMobile" style="padding-top: 80px;">
+    <img src="imagenes/cd.png" class="disco-cd" alt="disco" id="discoCdImg">
+    <div class="genre-nav">
+      <button class="genre-arrow" onclick="changeGenreTablet(-1)">&#8249;</button>
+      <span class="genre-current-name" id="genreCurrentName">Trap</span>
+      <button class="genre-arrow" onclick="changeGenreTablet(1)">&#8250;</button>
+    </div>
+  </div>
+  <div class="mobile-cantantes-titulo">Cantantes</div>
+  <div class="cantantes-grid-mobile" id="cantantesGridMobile"></div>
+
+  <!-- ===== DESKTOP: CD sidebar + lista ===== -->
+  <div class="cantantes-tablet-layout">
+    <div class="disco-wrap">
+      <img src="imagenes/cd.png" class="disco-cd" alt="disco" id="discoCd">
+      <div class="genre-nav">
+        <button class="genre-arrow" onclick="changeGenreTablet(-1)">&#8249;</button>
+        <span class="genre-current-name" id="genreCurrentNameDesktop">Trap</span>
+        <button class="genre-arrow" onclick="changeGenreTablet(1)">&#8250;</button>
+      </div>
+    </div>
+    <div>
+      <div class="tablet-genre-label" id="tabletGenreLabel">Género</div>
+      <div class="tablet-titulo" id="tabletTitulo">Cantantes</div>
+      <div class="tablet-cantantes-list" id="tabletCantantesList"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Feel Tune</div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <a href="#">Ayuda</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">contacto@feeltune.com</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
